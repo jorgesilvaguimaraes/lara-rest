@@ -6,24 +6,18 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">Dashboard</div>
+
                 <div class="card-body">
-                    <form action="">
-                        <div class="form-group"> 
-                            <label for="inputThought" class="">O que está pensando neste momento?</label>
-                            <input type="text" id="inputThought" class="form-control" name="thought">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
                         </div>
-                        <button type="submit" class="btn btn-primary" >Enviar pensamento</button>
-                    </form>
+                    @endif
+
+                    You are logged in!
                 </div>
             </div>
-            
         </div>
     </div>
-
-    
-    <thought-component> </thought-component>
-
 </div>
-
-
 @endsection
